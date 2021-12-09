@@ -1,0 +1,53 @@
+{% extends 'smdproject/base/base.html' %}
+
+{% load static %}
+
+{% block title%}{{ dataset_title }}{% endblock %}
+
+{% block site_css %}
+    <link rel="stylesheet" href="{% static 'smdproject/styles/all-datasets.css' %}"></link> 
+    <link rel="stylesheet" href="{% static 'smdproject/styles/dataset-details.css' %}" />
+{% endblock %}
+
+{% block main_heading %}
+{{ dataset_title }}
+{% endblock %}
+
+{% block body %}
+
+{% if dataset_found %}
+<article id="dataset-details">
+  <img id="main-image" src="{{ dataset.image.url }}" alt="{{ dataset.title }}" />
+ 
+
+  <section id="details">
+    <h2>{{dataset.title}}</h2>
+    <h2>What's this dataset about?</h2>
+    <p>{{dataset.description}}</p>
+    <footer>
+      <p>Need more details? <a href="mailto:mxs1523@student.bham.ac.uk">Contact us</a></p>
+    </footer>
+  </section>
+  <!-- 
+    <section id="registration">
+    <h2>Sign Up</h2>
+    <form action="{% url 'dataset_details' dataset.slug %}" method="POST">
+      {% csrf_token %} 
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+      <div id="registration-actions">
+        <button>Register</button>
+      </div>
+    </form>
+  </section> 
+-->
+</article>
+{% else %}
+<article>
+  <p>No dataset found</p>
+</article>
+{% endif %}
+
+{% endblock %}
+     

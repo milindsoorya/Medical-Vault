@@ -1,0 +1,30 @@
+{% extends 'smdproject/base/base.html' %}
+
+{% load static %}
+
+{% block title%}Smd Project Team 19{% endblock %}
+
+{% block site_css %}
+    <link rel="stylesheet" href="{% static 'smdproject/styles/all-datasets.css' %}"></link> 
+    <link rel="stylesheet" href="{% static 'smdproject/styles/dataset-details.css' %}" />
+{% endblock %}
+
+{% block main_heading %}
+Repository of medical data
+{% endblock %}
+
+{% block header_content %}
+Created by Team 19
+{% endblock %}
+
+{% block body %}
+<section>
+    <h2>All Datasets</h2>
+    <ol>
+        {% for dataset in datasets %}
+             {% include 'smdproject/includes/dataset-item.html' with title=dataset.title image=dataset.image.url description=dataset.description slug=dataset.slug%}
+        {% endfor %}
+    </ol>
+</section>
+{% endblock %}
+     

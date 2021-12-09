@@ -1,0 +1,2 @@
+need to install pillow for image related things
+Our site can protect against cross site scripting attacks, due to the csrf_token used in django

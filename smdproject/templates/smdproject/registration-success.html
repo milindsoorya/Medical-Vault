@@ -1,0 +1,24 @@
+{% extends 'smdproject/base/base.html' %}
+
+{% load static %}
+
+{% block title %}You registered successfully!{% endblock %}
+
+{% block site_css %}
+    <link rel="stylesheet" href="{% static 'smdproject/styles/registration-confirmation.css' %}"></link> 
+{% endblock %}
+
+{% block main_heading %}Thanks for signing up!{% endblock %}
+
+{% block body %}
+<section id="confirmation">
+    <h2>You registered successfully!</h2>
+    <p>Thanks for sigining up</p>
+    <p>For more details Contact us at - <a href="mailto:mxs1523@student.bham.ac.uk">Email</a></p>
+</section>
+
+<section id="continue">
+    <p>Need more well organised medical data?</p>
+    <p><a href="/smdproject" class="btn">Explore all the datasets</a></p>
+</section>
+{% endblock %}
