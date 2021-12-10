@@ -1,6 +1,9 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/django,git,python,pycharm,visualstudio,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,git,python,pycharm,visualstudio,visualstudiocode
+ **/__pycache__/
+.DS_Store
+staging 
 
 ### Django ###
 *.log
