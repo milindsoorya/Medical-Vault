@@ -20,6 +20,7 @@ ol {
 .meetup-summary {
   display: flex;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .meetup-image {

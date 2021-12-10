@@ -60,6 +60,10 @@ class experiment_hub(models.Model):
     experiment_name = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     business_key = models.IntegerField()
+    slug = models.SlugField(null=True, blank=True)
+    date_created = models.DateField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='images', null=True, blank=True)
 
 
 class experiment1_metadata(models.Model):

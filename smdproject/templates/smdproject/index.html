@@ -22,7 +22,7 @@ Created by Team 19
     <h2>All Datasets</h2>
     <ol>
         {% for dataset in datasets %}
-             {% include 'smdproject/includes/dataset-item.html' with title=dataset.title image=dataset.image.url description=dataset.description slug=dataset.slug%}
+            {% include 'smdproject/includes/dataset-item.html' with title=dataset.experiment_name  image=dataset.image.url description=dataset.description slug=dataset.slug%}
         {% endfor %}
     </ol>
 </section>
