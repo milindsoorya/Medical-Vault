@@ -6,17 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Team 19{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'smdproject/styles/base.css' %}"></link> <!--Static tag-->
+    <link rel="stylesheet" href="{% static 'smdproject/styles/base.css' %}"></link>
+    <!-- Chart.js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
     {% block site_css %}{% endblock %}
     </head>
 <body>
+    {% block scripts %}
+    {% endblock %}
+    
+    {% block content %}
+    {% endblock %}
     <header id="main-header">
         <nav><a href="/smdproject" id="main-logo">Medical vault</a></nav>
         <h1>{% block main_heading %}Repository of medical data{% endblock %}</h1>
         {% block header_content %}{% endblock %}
     </header>
     <main>
-         {% block body%}{% endblock %}
+         {% block body %}{% endblock %}
     </main>
 </body>
 </html>

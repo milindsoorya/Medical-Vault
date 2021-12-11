@@ -18,9 +18,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic.base import RedirectView
+from smdproject.views import ChartView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url="/smdproject")),
-    path('smdproject/', include('smdproject.urls'))
+    path('smdproject/', include('smdproject.urls')),
+    path('chart', ChartView.as_view(), name="chart")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

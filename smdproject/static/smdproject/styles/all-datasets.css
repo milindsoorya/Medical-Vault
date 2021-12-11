@@ -1,5 +1,5 @@
 section {
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 3rem auto;
 }
 
@@ -20,6 +20,7 @@ ol {
 .meetup-summary {
   display: flex;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .meetup-image {
@@ -42,6 +43,7 @@ ol {
 
 .meetup-details address {
   font-style: italic;
+  text-align: justify;
 }
 
 .meetup-actions {
