@@ -37,6 +37,7 @@ def insertPatientDetails():
 
 
 def run():
+    # Code for loading dataset 1
     print("Inserting session details")
     session_hub.objects.all().delete()
     sess_name = ["1raSession", "2daSession"]
@@ -130,6 +131,7 @@ def run():
                             count += 1
             i += 1
 
+    # For loading dataset 2
     # print("inserting fnirs session1 data")
     # all_files = os.listdir(session_1)
     # fnirs_dataset2_wl1.objects.all().delete()

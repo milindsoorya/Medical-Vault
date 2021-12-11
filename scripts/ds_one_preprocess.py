@@ -16,6 +16,8 @@ def saveCsv(fileName, listData):
 def run():
     directory_path = "./staging/raw-data/Dataset 1/Dataset1_VM/VMData/"
 
+    # Please uncomment the lines until 41 only for the first time. It is used to handle some erroneously names files in dataset 1
+
     # old_name_deoxy = directory_path + "VM010_Viso_HBA_Probe1_Deoxy.csv"
     # old_name_oxy = directory_path + "VM010_Viso_HBA_Probe1_Oxy.csv"
     # old_name_total = directory_path + "VM010_Viso_HBA_Probe1_Total.csv"
